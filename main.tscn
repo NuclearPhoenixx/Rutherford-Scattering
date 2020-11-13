@@ -7,8 +7,8 @@
 [ext_resource path="res://src/gui/initialenergy.gd" type="Script" id=5]
 [ext_resource path="res://src/gui/mass1.gd" type="Script" id=6]
 [ext_resource path="res://src/gui/mass2.gd" type="Script" id=7]
-[ext_resource path="res://charge2.gd" type="Script" id=8]
-[ext_resource path="res://src/gui/charge1.gd" type="Script" id=9]
+[ext_resource path="res://src/gui/charge1.gd" type="Script" id=8]
+[ext_resource path="res://src/gui/charge2.gd" type="Script" id=9]
 [ext_resource path="res://src/gui/impactpar.gd" type="Script" id=10]
 [ext_resource path="res://src/gui/timespeed.gd" type="Script" id=11]
 [ext_resource path="res://src/gui/ekin1.gd" type="Script" id=12]
@@ -139,7 +139,7 @@ margin_top = 84.0
 margin_right = 129.0
 margin_bottom = 108.0
 focus_mode = 1
-script = ExtResource( 9 )
+script = ExtResource( 8 )
 
 [node name="ChargeLabel2" type="Label" parent="SettingsContainer/GridContainer"]
 margin_top = 117.0
@@ -153,7 +153,7 @@ margin_top = 112.0
 margin_right = 129.0
 margin_bottom = 136.0
 focus_mode = 1
-script = ExtResource( 8 )
+script = ExtResource( 9 )
 
 [node name="BLabel" type="Label" parent="SettingsContainer"]
 margin_top = 141.0

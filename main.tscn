@@ -1,0 +1,223 @@
+[gd_scene load_steps=16 format=2]
+
+[ext_resource path="res://src/scattering.gd" type="Script" id=1]
+[ext_resource path="res://src/gui/reset.gd" type="Script" id=2]
+[ext_resource path="res://src/gui/playpause.gd" type="Script" id=3]
+[ext_resource path="res://src/gui/time.gd" type="Script" id=4]
+[ext_resource path="res://src/gui/initialenergy.gd" type="Script" id=5]
+[ext_resource path="res://src/gui/mass1.gd" type="Script" id=6]
+[ext_resource path="res://src/gui/mass2.gd" type="Script" id=7]
+[ext_resource path="res://charge2.gd" type="Script" id=8]
+[ext_resource path="res://src/gui/charge1.gd" type="Script" id=9]
+[ext_resource path="res://src/gui/impactpar.gd" type="Script" id=10]
+[ext_resource path="res://src/gui/timespeed.gd" type="Script" id=11]
+[ext_resource path="res://src/gui/ekin1.gd" type="Script" id=12]
+[ext_resource path="res://src/gui/ekin2.gd" type="Script" id=13]
+[ext_resource path="res://src/gui/distance.gd" type="Script" id=14]
+[ext_resource path="res://src/gui/mindistance.gd" type="Script" id=15]
+
+[node name="Main" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="StatsContainer" type="VBoxContainer" parent="."]
+margin_right = 40.0
+margin_bottom = 40.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="PlayPause" type="Button" parent="StatsContainer"]
+pause_mode = 2
+margin_right = 40.0
+margin_bottom = 20.0
+focus_mode = 0
+script = ExtResource( 3 )
+
+[node name="RealTime" type="Label" parent="StatsContainer"]
+margin_top = 24.0
+margin_right = 40.0
+margin_bottom = 38.0
+text = "time"
+script = ExtResource( 4 )
+
+[node name="Ekin1" type="Label" parent="StatsContainer"]
+margin_top = 42.0
+margin_right = 40.0
+margin_bottom = 56.0
+script = ExtResource( 12 )
+
+[node name="Ekin2" type="Label" parent="StatsContainer"]
+margin_top = 60.0
+margin_right = 40.0
+margin_bottom = 74.0
+script = ExtResource( 13 )
+
+[node name="Distance" type="Label" parent="StatsContainer"]
+margin_top = 78.0
+margin_right = 40.0
+margin_bottom = 92.0
+script = ExtResource( 14 )
+
+[node name="MinDistance" type="Label" parent="StatsContainer"]
+margin_top = 96.0
+margin_right = 40.0
+margin_bottom = 110.0
+script = ExtResource( 15 )
+
+[node name="SettingsContainer" type="VBoxContainer" parent="."]
+pause_mode = 2
+anchor_left = 1.0
+anchor_right = 1.0
+margin_left = -131.0
+margin_bottom = 212.0
+custom_constants/separation = 5
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="GridContainer" type="GridContainer" parent="SettingsContainer"]
+margin_right = 131.0
+margin_bottom = 136.0
+columns = 2
+
+[node name="EnergyLabel" type="Label" parent="SettingsContainer/GridContainer"]
+margin_top = 5.0
+margin_right = 67.0
+margin_bottom = 19.0
+text = "E0 [MeV] ="
+
+[node name="InitialEnergy" type="LineEdit" parent="SettingsContainer/GridContainer"]
+margin_left = 71.0
+margin_right = 129.0
+margin_bottom = 24.0
+focus_mode = 1
+script = ExtResource( 5 )
+
+[node name="MassLabel1" type="Label" parent="SettingsContainer/GridContainer"]
+margin_top = 33.0
+margin_right = 67.0
+margin_bottom = 47.0
+text = "m1 [u]="
+
+[node name="MassParticle1" type="LineEdit" parent="SettingsContainer/GridContainer"]
+margin_left = 71.0
+margin_top = 28.0
+margin_right = 129.0
+margin_bottom = 52.0
+focus_mode = 1
+script = ExtResource( 6 )
+
+[node name="MassLabel2" type="Label" parent="SettingsContainer/GridContainer"]
+margin_top = 61.0
+margin_right = 67.0
+margin_bottom = 75.0
+text = "m2 [u]="
+
+[node name="MassParticle2" type="LineEdit" parent="SettingsContainer/GridContainer"]
+margin_left = 71.0
+margin_top = 56.0
+margin_right = 129.0
+margin_bottom = 80.0
+focus_mode = 1
+script = ExtResource( 7 )
+
+[node name="ChargeLabel1" type="Label" parent="SettingsContainer/GridContainer"]
+margin_top = 89.0
+margin_right = 67.0
+margin_bottom = 103.0
+text = "q1 [e]="
+
+[node name="ChargeParticle1" type="LineEdit" parent="SettingsContainer/GridContainer"]
+margin_left = 71.0
+margin_top = 84.0
+margin_right = 129.0
+margin_bottom = 108.0
+focus_mode = 1
+script = ExtResource( 9 )
+
+[node name="ChargeLabel2" type="Label" parent="SettingsContainer/GridContainer"]
+margin_top = 117.0
+margin_right = 67.0
+margin_bottom = 131.0
+text = "q2 [e]="
+
+[node name="ChargeParticle2" type="LineEdit" parent="SettingsContainer/GridContainer"]
+margin_left = 71.0
+margin_top = 112.0
+margin_right = 129.0
+margin_bottom = 136.0
+focus_mode = 1
+script = ExtResource( 8 )
+
+[node name="BLabel" type="Label" parent="SettingsContainer"]
+margin_top = 141.0
+margin_right = 131.0
+margin_bottom = 155.0
+text = "b (impact param.):"
+
+[node name="B" type="HSlider" parent="SettingsContainer"]
+margin_top = 160.0
+margin_right = 131.0
+margin_bottom = 176.0
+focus_mode = 1
+max_value = 2.0
+step = 0.05
+value = 1.0
+script = ExtResource( 10 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TimeSpeedLabel" type="Label" parent="SettingsContainer"]
+margin_top = 181.0
+margin_right = 131.0
+margin_bottom = 195.0
+text = "Time Multiplier:"
+
+[node name="TimeSpeed" type="HSlider" parent="SettingsContainer"]
+margin_top = 200.0
+margin_right = 131.0
+margin_bottom = 216.0
+focus_mode = 1
+min_value = 1.0
+value = 1.0
+script = ExtResource( 11 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Reset" type="Button" parent="SettingsContainer"]
+pause_mode = 2
+margin_top = 221.0
+margin_right = 131.0
+margin_bottom = 241.0
+text = "RESET"
+script = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="."]
+anchor_top = 1.0
+anchor_bottom = 1.0
+margin_top = -14.0
+margin_right = 40.0
+text = "Particle proportions not to scale!"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+[connection signal="pressed" from="StatsContainer/PlayPause" to="StatsContainer/PlayPause" method="_on_PlayPause_pressed"]
+[connection signal="text_entered" from="SettingsContainer/GridContainer/InitialEnergy" to="SettingsContainer/GridContainer/InitialEnergy" method="_on_InitialEnergy_text_entered"]
+[connection signal="text_entered" from="SettingsContainer/GridContainer/MassParticle1" to="SettingsContainer/GridContainer/MassParticle1" method="_on_MassParticle1_text_entered"]
+[connection signal="text_entered" from="SettingsContainer/GridContainer/MassParticle2" to="SettingsContainer/GridContainer/MassParticle2" method="_on_MassParticle2_text_entered"]
+[connection signal="text_entered" from="SettingsContainer/GridContainer/ChargeParticle1" to="SettingsContainer/GridContainer/ChargeParticle1" method="_on_ChargeParticle1_text_entered"]
+[connection signal="text_entered" from="SettingsContainer/GridContainer/ChargeParticle2" to="SettingsContainer/GridContainer/ChargeParticle2" method="_on_ChargeParticle2_text_entered"]
+[connection signal="value_changed" from="SettingsContainer/B" to="SettingsContainer/B" method="_on_B_value_changed"]
+[connection signal="value_changed" from="SettingsContainer/TimeSpeed" to="SettingsContainer/TimeSpeed" method="_on_TimeSpeed_value_changed"]
+[connection signal="pressed" from="SettingsContainer/Reset" to="SettingsContainer/Reset" method="_on_Reset_pressed"]

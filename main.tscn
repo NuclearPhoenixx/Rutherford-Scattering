@@ -212,6 +212,7 @@ text = "Particle proportions not to scale!"
 __meta__ = {
 "_edit_use_anchors_": false
 }
+
 [connection signal="pressed" from="StatsContainer/PlayPause" to="StatsContainer/PlayPause" method="_on_PlayPause_pressed"]
 [connection signal="text_entered" from="SettingsContainer/GridContainer/InitialEnergy" to="SettingsContainer/GridContainer/InitialEnergy" method="_on_InitialEnergy_text_entered"]
 [connection signal="text_entered" from="SettingsContainer/GridContainer/MassParticle1" to="SettingsContainer/GridContainer/MassParticle1" method="_on_MassParticle1_text_entered"]

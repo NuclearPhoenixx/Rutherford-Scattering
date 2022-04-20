@@ -1,5 +1,7 @@
 # Rutherford Scattering
 
+**This app is also available as a progressive web app. You can install it in Chrome and other Chromium-based browsers!**
+
 This simulation numerically solves the coupled differential equation for two charged particles interacting only via Coulomb's law.
 The resulting interaction is commonly known as Rutherford scattering or Coulomb scattering.
 

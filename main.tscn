@@ -25,17 +25,20 @@ __meta__ = {
 }
 
 [node name="StatsContainer" type="VBoxContainer" parent="."]
-margin_right = 40.0
-margin_bottom = 40.0
+margin_left = 5.0
+margin_top = 5.0
+margin_right = 45.0
+margin_bottom = 115.0
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="PlayPause" type="Button" parent="StatsContainer"]
 pause_mode = 2
-margin_right = 40.0
+margin_right = 12.0
 margin_bottom = 20.0
 focus_mode = 0
+size_flags_horizontal = 2
 script = ExtResource( 3 )
 
 [node name="RealTime" type="Label" parent="StatsContainer"]
@@ -73,8 +76,10 @@ script = ExtResource( 15 )
 pause_mode = 2
 anchor_left = 1.0
 anchor_right = 1.0
-margin_left = -131.0
-margin_bottom = 212.0
+margin_left = -140.0
+margin_top = 5.0
+margin_right = -5.0
+margin_bottom = 250.0
 custom_constants/separation = 5
 __meta__ = {
 "_edit_lock_": true,
@@ -82,7 +87,7 @@ __meta__ = {
 }
 
 [node name="GridContainer" type="GridContainer" parent="SettingsContainer"]
-margin_right = 131.0
+margin_right = 135.0
 margin_bottom = 136.0
 columns = 2
 
@@ -157,13 +162,13 @@ script = ExtResource( 9 )
 
 [node name="BLabel" type="Label" parent="SettingsContainer"]
 margin_top = 141.0
-margin_right = 131.0
+margin_right = 135.0
 margin_bottom = 155.0
 text = "b (impact param.):"
 
 [node name="B" type="HSlider" parent="SettingsContainer"]
 margin_top = 160.0
-margin_right = 131.0
+margin_right = 135.0
 margin_bottom = 176.0
 focus_mode = 1
 max_value = 2.0
@@ -176,13 +181,13 @@ __meta__ = {
 
 [node name="TimeSpeedLabel" type="Label" parent="SettingsContainer"]
 margin_top = 181.0
-margin_right = 131.0
+margin_right = 135.0
 margin_bottom = 195.0
 text = "Time Multiplier:"
 
 [node name="TimeSpeed" type="HSlider" parent="SettingsContainer"]
 margin_top = 200.0
-margin_right = 131.0
+margin_right = 135.0
 margin_bottom = 216.0
 focus_mode = 1
 min_value = 1.0
@@ -195,7 +200,7 @@ __meta__ = {
 [node name="Reset" type="Button" parent="SettingsContainer"]
 pause_mode = 2
 margin_top = 221.0
-margin_right = 131.0
+margin_right = 135.0
 margin_bottom = 241.0
 text = "RESET"
 script = ExtResource( 2 )

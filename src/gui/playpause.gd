@@ -1,6 +1,6 @@
 extends Button
 
-func _process(delta):
+func _process(_delta):
 	if get_tree().paused:
 		text = "Play"
 	else:

@@ -10,7 +10,7 @@ func _ready():
 func reset():
 	mind = -1
 
-func _process(delta):
+func _process(_delta):
 	var dist = (node.p0 - node.p1).length()
 	
 	if dist < mind or mind == -1:

@@ -13,4 +13,4 @@ Standard values represent a Proton being fired at a gold nucleus representing th
 * _Distances have been scaled up by a factor of 10^15._
 * _By default, the time scale has been scaled down by a factor of 10^21. This can be changed in-sim._
 
-Made with Godot Engine (no physics engine involved).
+Made with Godot Engine 3.x (no physics engine involved).
